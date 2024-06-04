@@ -1,5 +1,5 @@
 <x-app-layout>
-    {{-- <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4">
         <div class="row gap-4 flex flex-col lg:flex-row">
             <div class="col text-center flex-1">
                 <img src="{{ $product->image }}" alt="{{ $product->title }}" class="max-w-full h-auto">
@@ -55,7 +55,8 @@
                     <h1 class="font-bold fs-4">(Product 21) Sample - Computers & Accessories For Sale</h1>
                 </div>
                 <div class="descSection gap-2 d-flex flex-column">
-                    <div class="description">{{ $product->description }}</div>
+                    <div class="description">Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud
+                        felis. Pellentesque diam dolor, elementum etos lobortis...</div>
                     <div>Vendor: Ella - Halothemes<br>
                         SKU: KJSU-58636
                         <div class="Availability">Availability: In Stock</div>
