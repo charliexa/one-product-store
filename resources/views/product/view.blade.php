@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mx-auto px-4">
+    <!-- <div class="container mx-auto px-4">
         <div class="row gap-4 flex flex-col lg:flex-row">
             <div class="col text-center flex-1">
                 <img src="{{ $product->image }}" alt="{{ $product->title }}" class="max-w-full h-auto">
@@ -37,9 +37,9 @@
                 </div>
             </div>
         </div>
-    </div> --}}
-    <div class="container">
-        <div class="row gap-4" x-data="productItem({{ json_encode([
+    </div> --}} -->
+    <div class="container mx-auto px-4">
+        <div class="row gap-4 flex flex-col lg:flex-row" x-data="productItem({{ json_encode([
             'id' => $product->id,
             'slug' => $product->slug,
             'image' => $product->image,
