@@ -37,13 +37,20 @@
                 </div>
             </div>
         </div>
-    </div>  --}}
+    </div> --}}
     <div class="container">
-        <div class="row gap-4">
+        <div class="row gap-4" x-data="productItem({{ json_encode([
+            'id' => $product->id,
+            'slug' => $product->slug,
+            'image' => $product->image,
+            'title' => $product->title,
+            'price' => $product->price,
+            'addToCartUrl' => route('cart.add', $product)
+        ]) }})">
             <div class="col text-center">
                 <img src="{{ $product->image }}" alt="{{ $product->title }}">
             </div>
-            <div style="overflow-wrap: break-word;" class="col gap-3 d-flex flex-column fs-6 text-gray-600">
+            <div class="col gap-3 d-flex flex-column fs-6 text-gray-600" style="overflow-wrap: break-word;" >
                 <div class="ProdTitle text-black">
                     <h1 class="font-bold fs-4">(Product 21) Sample - Computers & Accessories For Sale</h1>
                 </div>
@@ -85,7 +92,16 @@
                         class="w-32 focus:border-purple-500 focus:outline-none rounded">
                 </div>
                 <div class="flex flex-row align-items-center justify-center gap-3 mr-4">
-                    <button class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5">Add to Cart</button>
+                    {{-- <button class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5">Add to Cart</button> --}}
+                <button @click="addToCart($refs.quantityEl.value)"
+                    class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    Add to Cart
+                </button>
                     <div class="border-1 flex items-center justify-center p-2 text-center border-gray-300 text-gray-400 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                             stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
