@@ -2,7 +2,7 @@
     <form
         action="{{ route('register') }}"
         method="post"
-        class="mx-auto p-6 my-16"
+        class="max-w-[400px] mx-auto p-6 my-16"
     >
         @csrf
 
