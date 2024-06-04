@@ -94,7 +94,7 @@
                 <div class="flex flex-row align-items-center justify-center gap-3 mr-4">
                     {{-- <button class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5">Add to Cart</button> --}}
                 <button @click="addToCart($refs.quantityEl.value)"
-                    class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5">
+                    class="btn bg-dark py-2 text-white fs-4 flex items-center justify-center min-w-0 w-full rounded-5">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round"
