@@ -52,7 +52,7 @@
 
     @include('layouts.navigation')
 
-    <main class="p-2 py-5">
+    <main class="p-2 py-5 my-10 ms:my-0">
         {{ $slot }}
     </main>
 
@@ -74,5 +74,4 @@
     </div>
     <!--/ Toast -->
 </body>
-
 </html>

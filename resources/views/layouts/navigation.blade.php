@@ -75,22 +75,6 @@
             <li>
                 <a
                     href="{{ route('cart.index') }}"
-                    class="relative inline-flex items-center py-3 px-[5px] hover:bg-slate-900 gap-1"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    Wish Lists
-                    <small
-                        x-show="cartItemsCount"
-                        x-transition
-                        x-cloak
-                        x-text="cartItemsCount"
-                        class="absolute z-[100] top-4 -right-3 py-[2px] px-[8px] rounded-full bg-red-500"
-                    ></small>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="{{ route('cart.index') }}"
                     class="relative inline-flex items-center py-3 px-[5px] hover:bg-slate-900"
                 >
                     <svg
@@ -123,7 +107,7 @@
                         @click="open = !open"
                         class="cursor-pointer flex items-center py-3 px-[5px] pr-5 hover:bg-slate-900"
                     >
-              <span class="flex items-center">
+                <span class="flex items-center">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 mr-2"
@@ -209,8 +193,8 @@
                                 @csrf
 
                                 <a href="{{ route('logout') }}"
-                                   class="flex px-3 py-2 hover:bg-slate-900"
-                                   onclick="event.preventDefault();
+                                    class="flex px-3 py-2 hover:bg-slate-900"
+                                    onclick="event.preventDefault();
                                         this.closest('form').submit();">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -340,20 +324,6 @@
             </svg>
             My Orders
         </a>
-        <a
-            href="{{ route('cart.index') }}"
-            class="flex flex-col items-center py-3 px-[5px] hover:text-gray-200 gap-1 hover:bg-gray-900 text-xs"
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            Wish Lists
-            <small
-                x-show="cartItemsCount"
-                x-transition
-                x-cloak
-                x-text="cartItemsCount"
-                class="absolute z-[100] top-4 -right-3 py-[2px] px-[8px] rounded-full bg-red-500"
-            ></small>
-        </a>
         <form method="POST" action="{{ route('logout') }}">
             @csrf
 
@@ -398,20 +368,6 @@
                 />
             </svg>
             Register
-        </a>
-        <a
-            href="{{ route('cart.index') }}"
-            class="flex flex-col items-center py-3 px-[5px] hover:text-gray-200 gap-1 hover:bg-gray-900 text-xs"
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            Wish Lists
-            <small
-                x-show="cartItemsCount"
-                x-transition
-                x-cloak
-                x-text="cartItemsCount"
-                class="absolute z-[100] top-4 -right-3 py-[2px] px-[8px] rounded-full bg-red-500"
-            ></small>
         </a>
         <a
             href="{{ route('login') }}"
